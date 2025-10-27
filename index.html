@@ -160,7 +160,7 @@
             The IndustRoPose real-time 6D pose tracking pipeline. An incoming RGB frame is segmented by SAM2, and the resulting mask is compared to a rendered mask from the previous pose. A mask-consistency score then triggers one of three modes: Track, Refine, or Recover using MegaPose. This adaptive approach ensures robust tracking at over 10 FPS by efficiently allocating computational resources.
           </p>
         </div>
-        <img src="./static/images/figure1_architecture.png" alt="IndustRoPose pipeline architecture" style="width: 100%;"/>
+        <img src="./static/images/Real-Time6DPoseTracker.png" alt="IndustRoPose pipeline architecture" style="width: 100%;"/>
       </div>
     </div>
     <div class="columns is-centered">
@@ -171,7 +171,7 @@
             Illustration of the modular, skill-based manipulation for USB A assembly. The task is decomposed into a sequence of adaptive robot skills: Move to Object (approach and align for grasp), Move Gripper (grasping action), Move Robot (repositioning with object in hand), Move Object to (transport and align the object to target location), and Insertion (precise, contact-rich insertion). The insets highlight the object's perspective and gripper action at each stage.
           </p>
         </div>
-        <img src="./static/images/figure2_skills.gif" alt="Modular manipulation skills pipeline" style="width: 100%;"/>
+        <img src="./static/images/PoseBasedRoboticManipulation.png" alt="Modular manipulation skills pipeline" style="width: 100%;"/>
       </div>
     </div>
     <div class="columns is-centered">
@@ -182,7 +182,7 @@
             Architecture of the transformer-based policy for precision insertion. Dual ResNet18 encoders extract 2D feature maps from multi-camera inputs. The concatenated features, augmented with positional encoding, are processed by a Transformer Encoder to find cross-view correspondences. Finally, an MLP decoder regresses the 6-DOF pose correction required for alignment.
           </p>
         </div>
-        <img src="./static/images/figure3_transformer.png" alt="Transformer insertion policy architecture" style="width: 100%;"/>
+        <img src="./static/images/transformer.png" alt="Transformer insertion policy architecture" style="width: 100%;"/>
       </div>
     </div>
     <div class="columns is-centered">
@@ -195,12 +195,12 @@
         </div>
         
         <h3 class="title is-4">Test Cases</h3>
-        <img src="./static/images/figure4_objects.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
+        <img src="./static/images/text_cases.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
         <p class="has-text-centered">The set of connectors (USB, RJ45, HDMI) and screws (Hex, Phillips) used in our experiments.</p>
         <br>
 
         <h3 class="title is-4">Experimental Setup</h3>
-        <img src="./static/images/figure5_setup.png" alt="Experimental setup with UR5e robot" style="width: 100%;"/>
+        <img src="./static/images/setup.png" alt="Experimental setup with UR5e robot" style="width: 100%;"/>
         <p class="has-text-centered">Experimental setups for Plug Insertion (left) and Screw/Unscrew (right) using a UR5e arm, dual RealSense cameras, and task-specific end-effectors.</p>
         <br>
 
