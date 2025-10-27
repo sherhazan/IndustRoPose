@@ -3,12 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="IndustRoPose: a real-time, zero-shot 6D pose tracker for industrial robotic manipulation, integrating SAM2 and MegaPose.">
+  <meta name="keywords" content="IndustRoPose, 6D Pose Estimation, Robotic Manipulation, Zero-Shot, Real-Time Tracking, SAM2, MegaPose">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,7 +31,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/favicon.svg"> 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -52,33 +51,11 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
+      <a class="navbar-item" href="https://YourUsername.github.io/your-repo-name"> <span class="icon">
           <i class="fas fa-home"></i>
       </span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
     </div>
-
   </div>
 </nav>
 
@@ -88,39 +65,22 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+            <span class="author-block">Sher Hazan<sup>1</sup>,</span>
+            <span class="author-block">Nimrod Curtis<sup>1</sup>,</span>
+            <span class="author-block">Anton Agafonov<sup>1</sup>,</span>
+            <span class="author-block">Zohar Feldman<sup>1</sup>,</span>
+            <span class="author-block">Dotan Di Castro<sup>1</sup></span>
           </div>
-
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Bosch Corporate Research, Haifa, Israel</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="./static/pdfs/IndustRoPose.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +89,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://arxiv.org/abs/YOUR_ARXIV_ID"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,9 +97,8 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_ID"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -147,9 +106,8 @@
                   <span>Video</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/YOUR_USERNAME/YOUR_REPO"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -157,15 +115,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -183,124 +132,33 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        IndustRoPose enables robust, real-time 6D pose tracking for industrial assembly tasks like insertion and screwing.
       </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Robotic assembly remains a core challenge in industrial automation, requiring high precision, real-time feedback, and adaptability across diverse parts and dynamic environments. While recent advances in 6D object pose estimation and foundation models offer promising capabilities, most approaches are evaluated in static environments and lack robust integration into industrial workflows. In this work, we introduce IndustRoPose, a real-time, zero-shot 6D pose tracker for industrial robotic manipulation. IndustRoPose integrates SAM2 for high-frequency segmentation with MegaPose for render-and-compare 6D pose estimation. Its mask-consistency scoring adaptively switches between tracking, refinement, and recovery modes, ensuring robustness under occlusion, motion blur, and visual ambiguity. IndustRoPose enables fast and easy onboarding of new objects using only a CAD model and a single annotated image, without task-specific retraining or simulation. We integrate IndustRoPose into the robot via a pose-based control policy that fuses perception with motion commands, maintaining stable tracking even during high-speed movements. To address flexible and scalable automation, we present IndustRobot, a modular framework for industrial robotic assembly. IndustRobot seamlessly integrates IndustRoPose with a skill-based manipulation layer, supporting adaptive behaviors and rapid task reconfiguration. This enables precise execution of contact-rich skills such as insertion, screwing, and part manipulation, while allowing skills to be reused or extended for new tasks with minimal programming. Finally, we demonstrate sub-millimeter pose accuracy and high task success rates, 96.7% for plug insertion and 97.5% for screwing, on real industrial assembly tasks, validating the practicality and robustness of the approach in dynamic environments.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_ID_HERE?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
-  </div>
+    </div>
 </section>
 
 
@@ -308,161 +166,90 @@
   <div class="container is-max-desktop">
 
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method: IndustRoPose 6D Pose Tracker</h2>
+        <div class="content has-text-justified">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            The IndustRoPose real-time 6D pose tracking pipeline. An incoming RGB frame is segmented by SAM2, and the resulting mask is compared to a rendered mask from the previous pose. A mask-consistency score then triggers one of three modes: Track, Refine, or Recover using MegaPose. This adaptive approach ensures robust tracking at over 10 FPS by efficiently allocating computational resources.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
+        <img src="./static/images/figure1_architecture.png" alt="IndustRoPose pipeline architecture" style="width: 100%;"/>
       </div>
     </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h2 class="title is-3">IndustRobot: Modular Skill-Based Manipulation</h2>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            Illustration of the modular, skill-based manipulation for USB A assembly. The task is decomposed into a sequence of adaptive robot skills: Move to Object (approach and align for grasp), Move Gripper (grasping action), Move Robot (repositioning with object in hand), Move Object to (transport and align the object to target location), and Insertion (precise, contact-rich insertion). The insets highlight the object's perspective and gripper action at each stage.
           </p>
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
+        <img src="./static/images/figure2_skills.gif" alt="Modular manipulation skills pipeline" style="width: 100%;"/>
       </div>
     </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
+        <h2 class="title is-3">Transformer-based Insertion Policy</h2>
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            Architecture of the transformer-based policy for precision insertion. Dual ResNet18 encoders extract 2D feature maps from multi-camera inputs. The concatenated features, augmented with positional encoding, are processed by a Transformer Encoder to find cross-view correspondences. Finally, an MLP decoder regresses the 6-DOF pose correction required for alignment.
           </p>
         </div>
+        <img src="./static/images/figure3_transformer.png" alt="Transformer insertion policy architecture" style="width: 100%;"/>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experimental Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            We evaluated our framework on two real-world tasks: plug insertion and screw driving, using a diverse set of standard industrial and consumer components.
+          </p>
+        </div>
+        
+        <h3 class="title is-4">Test Cases</h3>
+        <img src="./static/images/figure4_objects.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
+        <p class="has-text-centered">The set of connectors (USB, RJ45, HDMI) and screws (Hex, Phillips) used in our experiments.</p>
+        <br>
 
-  </div>
+        <h3 class="title is-4">Experimental Setup</h3>
+        <img src="./static/images/figure5_setup.png" alt="Experimental setup with UR5e robot" style="width: 100%;"/>
+        <p class="has-text-centered">Experimental setups for Plug Insertion (left) and Screw/Unscrew (right) using a UR5e arm, dual RealSense cameras, and task-specific end-effectors.</p>
+        <br>
+
+        <h3 class="title is-4">Success Rates</h3>
+        <div class="content has-text-justified">
+          <p>
+            We achieved high success rates across all stages. For plug assembly, the full pipeline success rate was <b>96.67%</b>. For the screwing task, the full pipeline success rate was <b>97.50%</b>, validating the robustness and modularity of our approach.
+          </p>
+        </div>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+          <img src="./static/images/table1_plugs.png" alt="Plug assembly success rates" style="max-width: 48%; margin-bottom: 10px;"/>
+          <img src="./static/images/table2_screws.png" alt="Screw/Unscrew success rates" style="max-width: 48%; margin-bottom: 10px;"/>
+        </div>
+
+      </div>
+    </div>
+    </div>
 </section>
-
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@inproceedings{hazan2025industropose,
+  title={IndustRoPose: Zero Shot Real-Time 6D Pose Tracking for Industrial Robotic Manipulation},
+  author={Hazan, Sher and Curtis, Nimrod and Agafonov, Anton and Feldman, Zohar and Di Castro, Dotan},
+  booktitle={Proceedings of the ... (e.g., IEEE International Conference on Robotics and Automation (ICRA))},
+  year={2025}
 }</code></pre>
   </div>
 </section>
-
-
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
+         href="./static/pdfs/IndustRoPose.pdf"> <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
+      <a class="icon-link" href="https://github.com/YOUR_USERNAME/YOUR_REPO" class="external-link"> <i class="fab fa-github"></i>
       </a>
     </div>
     <div class="columns is-centered">
