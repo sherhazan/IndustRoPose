@@ -213,35 +213,48 @@
       </div>
     </div>
 
-    <div class="columns is-centered">
+      <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Experimental Results</h2>
+
+        <h2 class="title is-3">Experiments</h2>
+        
         <div class="content has-text-justified">
           <p>
             We evaluated our framework on two real-world tasks: plug insertion and screw driving, using a diverse set of standard industrial and consumer components.
           </p>
         </div>
         
-        <h3 class="title is-4">Test Cases</h3>
-        <img src="./static/images/text_cases.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
-        <p class="has-text-centered">The set of connectors (USB, RJ45, HDMI) and screws (Hex, Phillips) used in our experiments.</p>
-        <br>
-
-        <h3 class="title is-4">Experimental Setup</h3>
-        <img src="./static/images/setup.png" alt="Experimental setup with UR5e robot" style="width: 100%;"/>
-        <p class="has-text-centered">Experimental setups for Plug Insertion (left) and Screw/Unscrew (right) using a UR5e arm, dual RealSense cameras, and task-specific end-effectors.</p>
-        <br>
-
-        <h3 class="title is-4">Success Rates</h3>
+        <h3 class="title is-4">Experimental Setup & Test Cases</h3>
+        
         <div class="content has-text-justified">
           <p>
-            We achieved high success rates across all stages. For plug assembly, the full pipeline success rate was <b>96.67%</b>. For the screwing task, the full pipeline success rate was <b>97.50%</b>, validating the robustness and modularity of our approach.
+            All experiments were conducted on a UR5e robotic arm in a controlled cell. The perception system consists of two Intel RealSense D405 cameras mounted on the robot's wrist. As shown in the figure, the end-effector was task-specific: a Robotiq 2F-85 adaptive gripper for plug insertion and a Bosch GO-2 electric screwdriver for screwing.
           </p>
         </div>
+        <img src="./static/images/setup.png" alt="Experimental setup with UR5e robot" style="width: 100%;"/>
+        
+        <br><br> <div class="content has-text-justified">
+          <p>
+            To evaluate generality, we selected a diverse set of standard components. For plug assembly, this included USB (Types A, B, C), Ethernet (RJ45), Telephone (RJ11), and HDMI. The screwing task utilized M8 screws with Phillips (PH2, PH3) and Hex (HEX5, HEX6) drive types.
+          </p>
+        </div>
+        <img src="./static/images/text_cases.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
+        
+        <h3 class="title is-4">Success Rates</h3>
+        
+        <div class="content has-text-justified">
+          <p>
+            We achieved high success rates across all stages. For the plug assembly task, the full end-to-end pipeline success rate was <b>96.67%</b> (58/60). For the screwing task, the full pipeline success rate was <b>97.50%</b> (39/40), validating the robustness and modularity of our approach.
+          </p>
+        </div>
+        
         <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
           <img src="./static/images/table_1.png" alt="Plug assembly success rates" style="max-width: 48%; margin-bottom: 10px;"/>
           <img src="./static/images/table_2.png" alt="Screw/Unscrew success rates" style="max-width: 48%; margin-bottom: 10px;"/>
         </div>
+        
+      </div>
+    </div>
 
       </div>
     </div>
