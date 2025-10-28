@@ -156,9 +156,31 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Method: IndustRoPose 6D Pose Tracker</h2>
         <div class="content has-text-justified">
-          <p>
-            The IndustRoPose real-time 6D pose tracking pipeline. An incoming RGB frame is segmented by SAM2, and the resulting mask is compared to a rendered mask from the previous pose. A mask-consistency score then triggers one of three modes: Track, Refine, or Recover using MegaPose. This adaptive approach ensures robust tracking at over 10 FPS by efficiently allocating computational resources.
-          </p>
+        <p>
+          At the core of our system is IndustRoPose, a real-time 6D pose tracking pipeline designed for robust performance on streaming RGB input. It integrates the rapid zero-shot segmentation capability of SAM2 with the precise render-and-compare estimation of MegaPose.
+        </p>
+        <p>
+          <strong>How it works:</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>Initialization:</strong> Before the stream begins, we initialize the system. SAM2 is given a pre-captured image and prompt points to automatically identify the target object. Simultaneously, MegaPose is loaded with the object's CAD model and camera intrinsic parameters.
+          </li>
+          <li>
+            <strong>Tracking & Scoring:</strong> Once initialized, the system enters its tracking loop. At each timestep, it compares the current segmentation mask from SAM2 (the "ground truth") to a rendered mask from the previous pose estimate. We compute a "mask-consistency score" based on precision and recall to infer the tracking quality without running the expensive full pose estimation model every frame.
+          </li>
+          <li>
+            <strong>Adaptive Modes:</strong> This score dynamically triggers one of three modes:
+            <ol>
+              <li><strong>Track:</strong> If the score is high, we assume the previous pose is accurate and carry it forward.</li>
+              <li><strong>Refine:</strong> If the score is moderate (indicating minor drift), we trigger only the MegaPose refiner for a lightweight correction.</li>
+              <li><strong>Recover:</strong> If the score is low (due to occlusion or fast motion), we re-run the full coarse-to-fine estimation process to re-acquire the pose.</li>
+            </ol>
+          </li>
+        </ul>
+        <p>
+          This adaptive strategy balances accuracy and computational efficiency, ensuring real-time performance (over 10 FPS) even under challenging conditions like occlusion, motion blur, or partial object visibility.
+        </p>
         </div>
         <img src="./static/images/Real-Time6DPoseTracker.png" alt="IndustRoPose pipeline architecture" style="width: 100%;"/>
       </div>
