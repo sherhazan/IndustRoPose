@@ -155,7 +155,7 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
-        <h3 class="title is-4">IndustRoPose: 6D Pose Tracker</h3>
+        <h3 class="title is-4">IndustRoPose: Real-Time 6D Pose Tracker</h3>
         <div class="content has-text-justified">
         <p>
           At the core of our system is IndustRoPose, a real-time 6D pose tracking pipeline designed for robust performance on streaming RGB input. It integrates the rapid zero-shot segmentation capability of SAM2 with the precise render-and-compare estimation of MegaPose.
@@ -186,28 +186,36 @@
         <img src="./static/images/Real-Time6DPoseTracker.png" alt="IndustRoPose pipeline architecture" style="width: 100%;"/>
       </div>
     </div>
-    <div class="columns is-centered">
+      <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">IndustRobot: Modular Skill-Based Manipulation</h2>
+        <h3 class="title is-4">IndustRobot: Pose-Based Robotic Manipulation</h3>
+        
         <div class="content has-text-justified">
           <p>
-            Illustration of the modular, skill-based manipulation for USB A assembly. The task is decomposed into a sequence of adaptive robot skills: Move to Object (approach and align for grasp), Move Gripper (grasping action), Move Robot (repositioning with object in hand), Move Object to (transport and align the object to target location), and Insertion (precise, contact-rich insertion). The insets highlight the object's perspective and gripper action at each stage.
+            To address flexible and scalable automation, we present IndustRobot, a modular framework that integrates IndustRoPose's perception with a skill-based manipulation layer. To execute complex assembly tasks, we decompose the process into a sequence of modular, reusable sub-tasks or "skills" that can be refined independently and recombined for new tasks .
           </p>
+          <p>
+            As illustrated in the figure below, key skills include:
+          </p>
+          <ul>
+            <li><strong>Move to Object:</strong> A pose-based skill using the IndustRoPose tracker to guide the gripper to the target object.</li>
+            <li><strong>Move Gripper:</strong> A low-level skill for force-controlled grasping.</li>
+            <li><strong>Move Object to:</strong> A pose-based skill to transport the grasped object to a target, also stabilized by the tracker.</li>
+            <li><strong>Insertion / Screwing:</strong> Advanced skills for the final, high-precision, contact-rich maneuvers.</li>
+          </ul>
         </div>
         <img src="./static/images/PoseBasedRoboticManipulation.png" alt="Modular manipulation skills pipeline" style="width: 100%;"/>
-      </div>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Transformer-based Insertion Policy</h2>
-        <div class="content has-text-justified">
+        
+        <br> <div class="content has-text-justified">
           <p>
-            Architecture of the transformer-based policy for precision insertion. Dual ResNet18 encoders extract 2D feature maps from multi-camera inputs. The concatenated features, augmented with positional encoding, are processed by a Transformer Encoder to find cross-view correspondences. Finally, an MLP decoder regresses the 6-DOF pose correction required for alignment.
+            For precise, contact-rich skills like insertion, we use an advanced policy implemented using a transformer-based architecture. As shown in the next figure, it processes images from two cameras through ResNet18 encoders to extract feature maps. These are fed into a Transformer Encoder to find robust cross-view correspondences. Finally, an MLP decoder regresses the precise 6-DOF pose correction required for alignment.
           </p>
         </div>
         <img src="./static/images/transformer.png" alt="Transformer insertion policy architecture" style="width: 100%;"/>
+        
       </div>
     </div>
+
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Experimental Results</h2>
