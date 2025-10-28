@@ -192,10 +192,7 @@
         
         <div class="content has-text-justified">
           <p>
-            To address flexible and scalable automation, we present IndustRobot, a modular framework that integrates IndustRoPose's perception with a skill-based manipulation layer. To execute complex assembly tasks, we decompose the process into a sequence of modular, reusable sub-tasks or "skills" that can be refined independently and recombined for new tasks .
-          </p>
-          <p>
-            As illustrated in the figure below, key skills include:
+            To address כlexible and scalable automation, we present IndustRobot, a modular framework that integrates IndustRoPose's perception with a skill-based manipulation layer. To execute complex assembly tasks, we decompose the process into a sequence of modular and reusable skills that can be refined independently and recombined to solve new tasks. These skills, illustrated in the figure below, include:
           </p>
           <ul>
             <li><strong>Move to Object:</strong> A pose-based skill using the IndustRoPose tracker to guide the gripper to the target object.</li>
@@ -206,7 +203,8 @@
         </div>
         <img src="./static/images/PoseBasedRoboticManipulation.png" alt="Modular manipulation skills pipeline" style="width: 100%;"/>
         
-        <br> <div class="content has-text-justified">
+        <br><br> <div class="content has-text-justified">
+        <div class="content has-text-justified" style="margin-top: 25px;">
           <p>
             For precise, contact-rich skills like insertion, we use an advanced policy implemented using a transformer-based architecture. As shown in the next figure, it processes images from two cameras through ResNet18 encoders to extract feature maps. These are fed into a Transformer Encoder to find robust cross-view correspondences. Finally, an MLP decoder regresses the precise 6-DOF pose correction required for alignment.
           </p>
