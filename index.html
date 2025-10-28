@@ -228,7 +228,7 @@
         
         <div class="content has-text-justified">
           <p>
-            To evaluate generality, we selected a diverse set of standard components. For plug assembly, this included USB (Types A, B, C), Ethernet (RJ45), Telephone (RJ11), and HDMI. [cite_start]The screwing task utilized M8 screws with Phillips (PH2, PH3) and Hex (HEX5, HEX6) drive types [cite: 250-251].
+            To evaluate generality, we selected a diverse set of standard components. For plug assembly, this included USB (Types A, B, C), Ethernet (RJ45), Telephone (RJ11), and HDMI. The screwing task utilized M8 screws with Phillips (PH2, PH3) and Hex (HEX5, HEX6) drive types.
           </p>
         </div>
         <img src="./static/images/text_cases.png" alt="Connectors and screws used in experiments" style="width: 100%;"/>
@@ -238,9 +238,8 @@
             All experiments were conducted on a UR5e robotic arm in a controlled cell. The perception system consists of two Intel RealSense D405 cameras mounted on the robot's wrist. As shown in the figure, the end-effector was task-specific: a Robotiq 2F-85 adaptive gripper for plug insertion and a Bosch GO-2 electric screwdriver for screwing.
           </p>
         </div>
-        <img src="./static/images/setup.png" alt="Experimental setup with UR5e robot" style="width: 50%;"/>
-
-        <br>
+        <img src="./static/images/setup.png" alt="Experimental setup with UR5e robot" style="width: 50%; display: block; margin: auto;"/>
+        <br><br>
         
         <h3 class="title is-4">Success Rates</h3>
         
@@ -251,10 +250,153 @@
         </div>
         
         <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
-          <img src="./static/images/table_1.png" alt="Plug assembly success rates" style="max-width: 48%; margin-bottom: 10px;"/>
-          <img src="./static/images/table_2.png" alt="Screw/Unscrew success rates" style="max-width: 48%; margin-bottom: 10px;"/>
+          <img src="./static/images/table_1.png" alt="Plug assembly success rates" style="max-width: 48%;"/>
+          <img src="./static/images/table_2.png" alt="Screw/Unscrew success rates" style="max-width: 48%;"/>
         </div>
-        
+
+
+        <div class="columns is-desktop">
+
+          <div class="column">
+            <table class="table is-bordered is-striped is-fullwidth is-narrow" style="font-size: 0.85em;">
+              <thead>
+                <tr>
+                  <th>Connector</th>
+                  <th>Grasp</th>
+                  <th>Align</th>
+                  <th>Insert</th>
+                  <th>Full pipeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>USB Type A</td>
+                  <td>100/100</td>
+                  <td>100/100</td>
+                  <td>97/100</td>
+                  <td>10/10</td>
+                </tr>
+                <tr>
+                  <td>USB Type B</td>
+                  <td>99/100</td>
+                  <td>100/100</td>
+                  <td>99/100</td>
+                  <td>10/10</td>
+                </tr>
+                <tr>
+                  <td>USB Type C</td>
+                  <td>99/100</td>
+                  <td>100/100</td>
+                  <td>99/100</td>
+                  <td>10/10</td>
+                </tr>
+                <tr>
+                  <td>Ethernet RJ45</td>
+                  <td>100/100</td>
+                  <td>100/100</td>
+                  <td>100/100</td>
+                  <td>10/10</td>
+                </tr>
+                <tr>
+                  <td>Telephone RJ11</td>
+                  <td>86/100</td>
+                  <td>97/100</td>
+                  <td>100/100</td>
+                  <td>9/10</td>
+                </tr>
+                <tr>
+                  <td>HDMI</td>
+                  <td>100/100</td>
+                  <td>100/100</td>
+                  <td>92/100</td>
+                  <td>9/10</td>
+                </tr>
+                <tr style="border-top: 2px solid #dbdbdb;">
+                  <td>Total</td>
+                  <td>584/600</td>
+                  <td>597/600</td>
+                  <td>587/600</td>
+                  <td>58/60</td>
+                </tr>
+                <tr>
+                  <td><strong>Success Rate</strong></td>
+                  <td><strong>97.33%</strong></td>
+                  <td><strong>99.50%</strong></td>
+                  <td><strong>97.83%</strong></td>
+                  <td><strong>96.67%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="column">
+            <table class="table is-bordered is-striped is-fullwidth is-narrow" style="font-size: 0.85em;">
+              <thead>
+                <tr>
+                  <th>Screw type</th>
+                  <th>Align</th>
+                  <th>Insert</th>
+                  <th>Screw</th>
+                  <th>Unscrew</th>
+                  <th>Full pipeline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Philips PH2</td>
+                  <td>99/100</td>
+                  <td>100/100</td>
+                  <td>50/50</td>
+                  <td>50/50</td>
+                  <td>10/10</td>
+                </tr>
+                <tr>
+                  <td>Philips PH3</td>
+                  <td>100/100</td>
+                  <td>100/100</td>
+                  <td>50/50</td>
+                  <td>49/50</td>
+                  <td>10/10</td>
+                </tr>
+                <tr>
+                  <td>Allen HEX5</td>
+                  <td>98/100</td>
+                  <td>94/100</td>
+                  <td>49/50</td>
+                  <td>46/50</td>
+                  <td>9/10</td>
+                </tr>
+                <tr>
+                  <td>Allen HEX6</td>
+                  <td>95/100</td>
+                  <td>98/100</td>
+                  <td>48/50</td>
+                  <td>50/50</td>
+                  <td>10/10</td>
+                </tr>
+                <tr style="border-top: 2px solid #dbdbdb;">
+                  <td>Total</td>
+                  <td>392/400</td>
+                  <td>392/400</td>
+                  <td>197/200</td>
+                  <td>195/200</td>
+                  <td>39/40</td>
+                </tr>
+                <tr>
+                  <td><strong>Success Rate</strong></td>
+                  <td><strong>98.00%</strong></td>
+                  <td><strong>98.00%</strong></td>
+                  <td><strong>98.50%</strong></td>
+                  <td><strong>97.50%</strong></td>
+                  <td><strong>97.50%</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+
       </div>
     </div>
 
